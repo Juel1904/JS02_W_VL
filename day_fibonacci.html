@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        var inputN = prompt("Mời nhập số n: ");
+        var i = 1;
+        var j = 1;
+        var h = 2;
+        document.write(i + ", "+j+ ", ");
+        while(h<inputN){
+            var sum = i+j;
+            i=j;
+            j = sum;
+            // console.log(sum);
+            document.write(sum + ", ");
+            // document.getElementById("show").innerHTML = sum + "</br>";
+            h++;
+        }
+    </script>
+</body>
+</html>
