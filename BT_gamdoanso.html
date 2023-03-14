@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Click below to run</p>
+    <button onclick="play()">Play</button>
+    <script>
+        function play() {
+            var rangenum = prompt("Mời nhập số lớn nhất:");
+            var randomNum = Math.floor(Math.random() * rangenum);
+            console.log(randomNum);
+            let i = 1;
+            while (i <= 3) {
+                var soDoan = prompt("Nhập số dự đoán của bạn:");
+                if (soDoan == randomNum) {
+                    alert("Chúc mừng bạn đã đoán đúng! Trò chơi kết thúc!");
+                    break;
+                } else if (soDoan > randomNum) {
+                    alert("Số bạn đoán lớn hơn số ngẫu nhiên, mời chọn lại");
+
+                } else {
+                    alert("Số bạn đoán nhỏ hơn số ngẫu nhiên, mời chọn lại");
+                }
+                
+                if (i == 3) {
+                    alert("Bạn đã thua cuộc trong trò chơi");
+                }
+                i++;
+            }
+
+            // console.log(randomNum);
+        }
+    </script>
+</body>
+
+</html>
